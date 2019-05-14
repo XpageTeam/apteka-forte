@@ -1,0 +1,63 @@
+.main-section
+	display: flex
+	margin: 40px 0 0
+
+	&__links
+		width: 500px
+		flex: none
+
+	&__links, &__catalog
+		display: flex
+		flex-direction: column
+
+	&__catalog
+		flex: 1 1 auto
+
+		&:not(:first-child)
+			margin-left: 40px
+
+.main__links, .m-catalog
+	background: #effcf5
+	border-radius: 15px
+	flex: 1 1 auto
+	padding: 20px 30px
+
+.main-title
+	font-size: 24px
+
+	&--superprice
+		text-transform: uppercase
+		border-radius: 13px
+		font-size: 30px
+		color: #fff	
+		background: linear-gradient(to bottom, #b40205, #ed0108)
+		padding: 8px 13px
+		position: relative
+
+		&:after
+			content: ""
+			pointer-events: none
+			position: absolute 3px
+			border: 2px solid #effcf5
+			border-radius: 12px
+
+.m-catalog__title, .main__links-title
+	margin-bottom: 10px
+
+.main__links
+
+	&-all
+		color: #414141
+		border-bottom: 1px solid
+		margin: 16px 0 0
+		display: inline-block
+
+.m-catalog
+
+	&--full
+
+		.catalog-list
+			margin-top: 30px
+
+			&__item
+				width: calc((100% - 60px * 5) / 5)

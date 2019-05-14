@@ -1,0 +1,86 @@
+header.head
+	.head__top
+		.wrapper
+			.h-t
+				.h-t__city
+					a.h-city.fancybox(href="#")
+						span.h-city__label Ваш город: 
+						span.h-city__name Челябинск
+				.h-t__cart
+					.h-cart
+						<!-- <div class="h-cart__empty">В Вашей корзине нет товаров</div> -->
+						.h-cart__link 
+							a(href="#") В Вашей корзине: 
+							span 1 товар на сумму 
+								b 170 р.
+
+	.head__bot
+		.wrapper
+			.h-b
+				.h-b__logo
+					a.logo(href="#")
+						img(src="img/logo.png")
+						img(src="img/logo.png")
+					.h-b__logo-personal
+						.h-personal
+							<!-- для неавторизованного -->
+							ul.h-personal__links
+								li
+									a.sign-in(href="#") Вход с паролем
+								li
+									a(href="#") Регистрация
+								li
+									a(href="#") Покупателю
+							| <!-- для авторизованного -->
+							| <!-- <div class="h-personal__name">ОАС (xpagemedia@yandex.ru)</div> 
+							| <ul class="h-personal__links">
+							|     <li><a href="#">Мои данные</a></li>
+							|     <li><a href="#">История заказов</a></li>
+							|     <li><a href="#">Покупателю</a></li>
+							|     <li><a href="#">Выйти</a></li>
+							| </ul> -->
+
+							//- .h-personal__name ОАС (xpagemedia@yandex.ru)
+							//- ul.h-personal__links
+							//- 	li
+							//- 		a(href="#") Мои данные
+							//- 	li
+							//- 		a(href="#") История заказов
+							//- 	li
+							//- 		a(href="#") Покупателю
+							//- 	li
+							//- 		a(href="#") Выйти
+				nav.h-b__nav
+					ul.h-menu
+						each item, i in ["Публикации", "Каталог", "Консультации", "Организации", ]
+							li
+								if (i == 2)
+									a.h-menu__link.active(href="#")=item
+								else
+									a.h-menu__link(href="#")=item
+				.h-b__right
+					.h-another
+						.h-another__contacts
+							.h-contacts
+								.h-contacts__phone
+									a(href="tel:83517785080") (351) 778-50-80 (Многоканальный)
+								.h-contacts__viber
+									a(href="http://chats.viber.com/aptekaforte") aptekaforte
+								.h-contacts__vk
+									a(href="https://vk.com/openline_aptekaforte") ВКонтакте 
+						.h-another__search
+							.h-search
+								.h-search__form
+									.h-search__title Поиск по наименованиею:
+									form(action="#")
+										.hs-form
+											input.hs-form__input(type="text")
+											input.hs-form__submit(type="submit" value="")
+										.hs-form__example
+											span например:
+												a(href="#") Но-шпа или штрихкод
+								.h-search__links
+									p
+										a(href="#") Расширенный поиск
+									p На 06.05.19 
+										a(href="#") В каталоге 15908 позиций

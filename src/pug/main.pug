@@ -1,0 +1,95 @@
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			.main-content
+				.wrapper
+					.top-links
+						.top-links__links
+							ul.t-links
+								li.t-links__el
+									a.t-links__link(href="#") Найти и зказать нужный препарат и сопуствующие товары
+								li.t-links__el
+									a.t-links__link(href="#") Получить ответ специалста на вопросы по лекарствам или заболеваниям
+								li.t-links__el
+									a.t-links__link(href="#") Узнать что-то новое и интересное в наших публикациях по медицине и фармацевтике
+								li.t-links__el
+									a.t-links__link(href="#") Быстро отыскать медицинский центр по типу специалсту
+						.top-links__banner
+							.top-banner
+								.top-banner__text Аптека Форте - это сертифицированные препараты и спровочные сервисы, которые помогу вам сделать уверенный шаг к здоровью.
+					.main-section
+						.main-section__links
+							.main__links
+								.main__links-title
+									.main-title Статьи
+								ul.m-links
+									each link in ["Оксифрин - дозированные капли для детей до 1 года", "МестаМидин-Сенс. Универсальный антисептик нового поколения.", "ПоксКлин при ветрянке у детей.", "Крем для лица «Буренка» — уникальное средство с эффективными ингредиентами.", ]
+										li
+											a.m-links__link(href="#")=link
+								a.main__links-all(href="#") Все статьи...
+						.main-section__catalog
+							.m-catalog
+								.m-catalog__title
+									a.main-title(href="#") Новинки каталога
+								.m-catalog__list
+									.catalog-list
+										- for (let i = 0; i < 3; i++)
+											.catalog-list__item
+												.cat-item
+													a.cat-item__img(href="#")
+														img(src="img/photos/00000135219.jpg")
+													.cat-item__title
+														a(href="#") ПРОКТУМ гель рект. тюб.8 мл №4 /с наконечником/
+													.cat-item__price 228 р.
+					.main-section
+						.main-section__links
+							.main__links
+								.main__links-title
+									.main-title Новости
+								ul.m-links
+									each link in ["Открылись новые пункты выдачи заказов в Челябинске, Миассе, Златоусте, Трехгорном", "МестаМидин-Сенс. Универсальный антисептик нового поколения.", "ПоксКлин при ветрянке у детей.", "Крем для лица «Буренка» — уникальное средство с эффективными ингредиентами.", ]
+										li
+											a.m-links__link(href="#")=link
+								a.main__links-all(href="#") Все новости...
+						.main-section__catalog
+							.m-catalog
+								.m-catalog__title
+									a.main-title(href="#") Акции
+								.m-catalog__list
+									.catalog-list.catalog-list--stocks
+										- for (let i = 0; i < 3; i++)
+											.catalog-list__item
+												.cat-item
+													a.cat-item__img(href="#")
+														img(src="img/photos/mesoluks.jpg")
+													.cat-item__title
+														a(href="#")  Скидка 30% на коллекцию MEZOLUX
+					.main-section
+						.main-section__catalog
+							.m-catalog.m-catalog--full
+								.m-catalog__title
+									a.main-title.main-title--superprice(href="#") Суперцена
+								.m-catalog__list
+									.catalog-list
+										- for (let i = 0; i < 5; i++)
+											.catalog-list__item
+												.cat-item
+													a.cat-item__img(href="#")
+														img(src="img/photos/00000135219.jpg")
+													.cat-item__title
+														a(href="#") ПРОКТУМ гель рект. тюб.8 мл №4 /с наконечником/
+													.cat-item__price 228 р.
+													.cat-item__price.cat-item__price--last Цена без скидки: 85р.
+					.seo-text
+						.seo-text__text
+							.text-page 
+								| <p><b>Интернет аптека</b> «Форте» предоставляет Вам возможность лёгкой и быстрой покупки лекарственных средств. С нами Вы сможете сэкономить и свой бюджет, и время на походы в аптеку, даже если она расположена совсем рядом с Вашим домом. </p><p>Теперь Вам не придется перед покупкой нужного лекарственного средства обзванивать все <b>аптеки</b>, <b>поиск лекарств</b> стал простым и легким благодаря удобному интерфейсу нашего сайта. Перед покупкой Вы можете осуществить самостоятельный <b>поиск лекарств</b> на нашем сайте или проконсультироваться с профессиональным фармацевтом по телефону. Вы получите грамотные рекомендации по выбору лекарственных препаратов, товаров для мам и новорожденных, лечебной косметики, биодобавок и других товаров. <b>Доставка лекарств</b> в аптеку нашей сети осуществляется бесплатно, Вам останется только подойти, оплатить и забрать продукцию. Вы можете непосредственно обратиться в наши лицензированные <b>аптеки, поиск лекарств</b> в этом случае – задача сотрудников сети аптек «Здоровье».</p><p><b>Интернет-аптека «Форте»</b> работает в соответствии с международным стандартом качества – мы поддерживаем широкий ассортимент товаров, демократичную ценовую политику, гарантируем подлинность лекарственных средств и высокий уровень обслуживания клиентов. На сайте aptekaforte.ru Вы можете использовать не только <b>поиск лекарств</b>, но и осуществлять поиск необходимого Вам медицинского учреждения по типу оказываемых им услуг или по наличию того или иного специалиста.</p>
+		include inc/footer.pug
+		include inc/scripts.pug
+		//- script(src="js/main-page.js")

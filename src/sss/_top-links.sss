@@ -1,0 +1,61 @@
+.top-links
+	display: flex
+	min-height: 280px
+	margin-bottom: 60px
+
+	&__links, &__banner
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+
+	&__banner
+		position: relative
+
+		&:before
+			content: ""
+			background: url("../img/liliya.png") no-repeat
+			size: width("../img/liliya.png") height("../img/liliya.png")
+			position: absolute * * -35px -45px
+
+	&__links
+		border-right: 1px solid #fff
+		max-width: 500px
+	
+.t-links
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	border-radius: 15px 0 0 15px
+	overflow: hidden
+
+	&__el
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+		background: linear-gradient(to bottom, rgba(#fff, .0001) -80px, var(--second-color), rgba(#fff, .0001) calc(100% + 80px))
+		background-size: 100px auto
+
+		&:not(:last-child)
+			border-bottom: 1px solid #fff
+
+		&:hover, &:focus-within
+			background: linear-gradient(to bottom, rgba(#fff, .0001) -80px, var(--main-color), rgba(#fff, .0001) calc(100% + 80px))
+	
+	&__link
+		color: #fff
+		flex: 1 1 auto
+		padding: 20px
+		font-size: 15px
+
+.top-banner
+	flex: 1 1 auto
+	color: #fff
+	border-radius: 0 15px 15px 0
+	padding: 38px 25px
+	background: url("../img/vetki3.png") left bottom no-repeat, url("../img/family.png") right bottom no-repeat, linear-gradient(to bottom, rgba(#fff, .0001) -200%, var(--second-color), rgba(#fff, .0001) calc(100% + 200%))
+
+	&__text
+		border-left: 1px solid #fff
+		padding-left: 25px
+		font-size: 17px
+		max-width: 343px
