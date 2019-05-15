@@ -55,7 +55,15 @@ header.head
 						each item, i in ["Публикации", "Каталог", "Консультации", "Организации", ]
 							li
 								if (i == 2)
+									a.h-menu__link.active(href="#")=item
+								else
 									a.h-menu__link(href="#")=item
+				nav.h-b__nav
+					ul.h-menu
+						each item, i in ["По категориям", "По алфавиту", "По производителю", "Новинки", "Производители"]
+							li
+								if (i == 3)
+									a.h-menu__link.active(href="#")=item
 								else
 									a.h-menu__link(href="#")=item
 				.h-b__right

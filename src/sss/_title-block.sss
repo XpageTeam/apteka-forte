@@ -1,20 +1,21 @@
 .title-block
-	display: flex
-	justify-content: space-between
-	flex-wrap: wrap
-
+	margin: 0 0 40px
+	
 	&__title
-		margin-right: 20px
 
 		h1
-			font-weight: bold
-			font-size: 40px
-			line-height: normal
+			font-size: 28px
 
-.title-menu
-	display: flex
+	&__crumbs
+		margin: 4px 0 0
 
-	li
+.bread-crumbs
 
-		&:not(:last-child)
-			margin-right: 22px
+	&__link
+		position: relative
+		padding-right: 20px
+		display: inline-block
+
+		&:after
+			content: "/"
+			position: absolute 0 5px 0 *

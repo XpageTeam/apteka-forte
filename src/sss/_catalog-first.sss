@@ -1,0 +1,40 @@
+.catalog-first
+
+	&__item
+
+		&:not(:first-child)
+			margin: 20px 0 0
+
+.first-cat
+	display: flex
+
+	&__img
+		flex: none
+		width: 100px
+		margin-right: 10px
+
+	&__list
+
+		li
+			display: inline
+
+			&:not(:last-child):after
+				content: ","
+				display: inline-block
+				margin-right: 3px
+
+	&__link
+		color: inherit
+
+		&:hover, &:focus
+			text-decoration: underline
+
+	&__title
+		margin-bottom: 6px
+
+		a
+			font-size: 18px
+
+		span
+			margin-left: 7px
+			font-size: 16px

@@ -1,6 +1,5 @@
 ul.paginator
-	li.paginator__arrow
-		a.paginator-arrow.unactive(href="#")
+	li.paginator__text Страницы: 
 	- for (let i = 1; i <= 5; i++)
 		li
 			if (i == 1)
@@ -11,5 +10,5 @@ ul.paginator
 				a.paginator__link(href="#") 22
 			else
 				a.paginator__link(href="#")=i
-	li.paginator__arrow
-		a.paginator-arrow(href="#")
+	li.paginator__text
+		a(href="#") Следующая >>

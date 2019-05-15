@@ -21,45 +21,36 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.js$/,
+				loader: "babel-loader",
+				query: {
+				  "presets": [
+				    ["env"]
+				  ]
+				},
+				// exclude: /\/node_modules\/(?!dom7|ssr-window|swiper)\//,
+				exclude: /(node_modules)/,
+			},
+			{
 				test: /\.ts$/,
 				loader: "ts-loader",
 				// exclude: /node_modules/,
 			},
 			{
 				test: /\.css$/,
+				// loader: "css-loader",
 				use: [
+					{
+						loader: "style-loader"
+					},
 					{
 						loader: "css-loader",
 						options: {
 							minimize: true,
-							sourceMap: true
 						}
 					}
 				]
-			},
-			{
-				test: /\.sss$/,
-				use: [
-					{
-						loader: "style-loader",
-						options: { sourceMap: true }
-					},
-			        {
-			          loader: 'css-loader',
-			          options: { sourceMap: true }
-			        },
-			        {
-			          loader: 'postcss-loader',
-			          options: { 
-			          	sourceMap: true, 
-			          	config: { 
-			          		path: './postcss.config.js' 
-			          	} 
-			          }
-			        }
-			    ]
-			},
-            
+			}
 		]
 	},
 	resolve: {

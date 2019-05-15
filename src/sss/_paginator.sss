@@ -1,0 +1,17 @@
+.paginator
+	display: flex
+	align-items: center
+	margin: 25px 0 0
+
+	li
+
+		&:not(:last-child)
+			margin-right: 7px
+
+	&__link
+		display: block
+		text-align: center
+		padding: 3px
+
+		&.active
+			color: #000 var(--main-color)

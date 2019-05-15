@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "finish:him": "webpack --mode production node_modules/.bin/webpack --config webpack.config.js --progress && gulp finish:him",
-    "deploy": "webpack --mode production node_modules/.bin/webpack --config webpack.config.js --progress && gulp deploy",
+    "finish:him": "webpack --mode production --progress && gulp finish:him",
+    "deploy": "webpack --mode production --progress && gulp deploy",
     "watch": "webpack --mode development --watch"
   },
   "author": "danil.khandys",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.4",
     "autoprefixer": "^9.5.1",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.5",
     "child_process": "^1.0.2",
     "css-color-converter": "^1.1.0",

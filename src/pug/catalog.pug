@@ -1,0 +1,56 @@
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header-inner.pug
+		main#content
+			.wrapper
+				.inner-content
+					.inner-content__content
+						.title-block
+							.title-block__title
+								h1 Каталог
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									span.bread-crumbs__this Каталог
+						.catalog-first
+							- for (let j = 0; j < 7; j++)
+								.catalog-first__item
+									.first-cat
+										a.first-cat__img(href="#")
+											img(src="img/photos/cat-"+j+".png")
+										.first-cat__desc
+											.first-cat__title
+												a(href="#") Лекарственные средства
+												span 2626
+											ul.first-cat__list
+												- for (let i = 0; i < 10; i++)
+													each link in ["Рецептурные ЛС", "Безрецептурные ЛС", "Для ЛПУ", ]
+														li
+															a.first-cat__link(href="#")=link
+						include inc/paginator.pug
+
+					aside.inner-content__side
+						.sidebar
+							.sidebar__buyer
+								.buyer
+									.buyer__title
+										.side-title Покупатели
+									nav.buyer__list
+										ul.buyer-list
+											each item in ["Поиск заказа по номеру телефона", "Проверка заказа по номеру", "Как сделать заказ?", "Оплата и доставка", "Правила обмена и возврата товара", "Расширенный поиск товаров на сайте", "Заказ ненайденных товаров", "Почему у нас такой большой ассортимент и такие низкие цены?", "Категории доставки", ]
+												li
+													a(href="#")=item
+							.sidebar__cart
+								.side-cart
+									.side-cart__title
+										.side-title Моя корзина
+									.side-cart__content
+										span Ваша корзина пуста
+		include inc/footer.pug
+		include inc/scripts.pug
+		//- script(src="js/main-page.js")

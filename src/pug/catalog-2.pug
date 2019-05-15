@@ -1,0 +1,52 @@
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Каталог - 2 уровень
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header-inner.pug
+		main#content
+			.wrapper
+				.inner-content
+					.inner-content__content
+						.title-block
+							.title-block__title
+								h1 Каталог
+							.title-block__crumbs
+								.bread-crumbs
+									a.bread-crumbs__link(href="#") Главная
+									a.bread-crumbs__link(href="#") Каталог
+									span.bread-crumbs__this Каталог - 2 уровень
+						.catalog-list
+							- for (let j = 0; j < 15; j++)
+								- for (let i = 0; i < 3; i++)
+									.catalog-list__item
+										.cat-item
+											a.cat-item__img(href="#")
+												img(src="img/photos/00000135219.jpg")
+											.cat-item__title
+												a(href="#") ПРОКТУМ гель рект. тюб.8 мл №4 /с наконечником/
+											.cat-item__price 228 р.
+						include inc/paginator.pug
+
+					aside.inner-content__side
+						.sidebar
+							.sidebar__buyer
+								.buyer
+									.buyer__title
+										.side-title Покупатели
+									nav.buyer__list
+										ul.buyer-list
+											each item in ["Поиск заказа по номеру телефона", "Проверка заказа по номеру", "Как сделать заказ?", "Оплата и доставка", "Правила обмена и возврата товара", "Расширенный поиск товаров на сайте", "Заказ ненайденных товаров", "Почему у нас такой большой ассортимент и такие низкие цены?", "Категории доставки", ]
+												li
+													a(href="#")=item
+							.sidebar__cart
+								.side-cart
+									.side-cart__title
+										.side-title Моя корзина
+									.side-cart__content
+										span Ваша корзина пуста
+		include inc/footer.pug
+		include inc/scripts.pug
+		//- script(src="js/main-page.js")

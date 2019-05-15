@@ -133,7 +133,7 @@ gulp.task("deploy:img", () =>
 
 gulp.task("deploy:docs", _ => 
 	gulp.src("docs/**/*.*", {buffer: false})
-		.pipe(xpager_conn.dest(xpager_path))
+		.pipe(xpager_conn.dest(connectionSettings.xpager.dirName))
 );
 
 gulp.task("deploy", gulp.series(gulp.parallel("postcss", "pug", "imagemin"), "deploy:docs"));
