@@ -71,6 +71,8 @@ class App {
 
 		if (typeof elements == "string")
 			elements = App.transformNodeListToArray(App.getElements(elements))
+		else if (elements instanceof NodeList)
+			elements = App.transformNodeListToArray(elements)
 
 		let i = 0;
 
