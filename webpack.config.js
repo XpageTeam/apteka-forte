@@ -12,10 +12,6 @@ module.exports = {
 	devServer: {
 		contentBase: "./docs",
 		overlay: false,
-	    // open: true,
-	    // hot: true,
-	    // inline: true,
-	    // watchContentBase: true,
 	},
 	devtool: 'source-map',
 	module: {
