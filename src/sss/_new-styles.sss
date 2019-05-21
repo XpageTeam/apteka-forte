@@ -1388,9 +1388,13 @@ div[id^="tab-"]:not(#tab-sale)
 	margin-left: 39px 
 	margin-right: 39px 
 	border: 1px solid #E6F1EC
-	display: flex
+	display: inline-flex
 	background: #fff
 	max-width: none
+
+	form
+		width: 100%
+		display: flex
 
 	&_minus, &_plus
 		color: #000
@@ -1422,3 +1426,67 @@ div[id^="tab-"]:not(#tab-sale)
 		width: 36px 
 		vertical-align: middle
 		background: none
+
+.catalog_top_filter form
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.bl_one_product_gallery
+	float: left
+	width: 290px 
+	height: 420px
+
+	&_item
+		width: 290px
+
+.bl_one_product_descr_cont_1, .bl_one_product_middle
+	float: left
+
+.clearfix
+
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+.bl_one_product_avail_h_tabs
+	float: left
+	border-radius: 5px
+	background: #fff
+.bl_one_product_avail_h_r
+	float: right
+.bl_one_product_avail_h_tabs span
+	display: inline-block
+	vertical-align: top
+	border-radius: 5px
+	height: 43px
+	line-height: 43px
+	color: #000
+	font-size: 14px
+	font-weight: 300
+	padding: 0 38px
+	background: #fff
+	cursor: pointer
+	transition: color .3s ease, background .3s ease
+.bl_one_product_avail_h_tabs span.active
+	background: #99C945
+	color: #fff
+.bl_one_product_avail_head
+	float: left
+	width: 100%
+	margin-bottom: 25px
+.bl_one_product_avail_h_r select
+	border: 1px solid #e7e7e7
+	padding-left: 20px
+	border-radius: 20px
+	height: 38px
+	vertical-align: middle
+	width: 300px
+	margin-left: 15px
+	cursor: pointer
+	outline: none
+	background: url(../img/arrow_select.png) no-repeat 94% center
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none

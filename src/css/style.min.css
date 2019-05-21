@@ -236,8 +236,7 @@
 .bl_bottom_s_text p{margin:0 0 10px 0;}
 .bl_bottom_s_text ul, .bl_bottom_s_text ol{padding-left:20px;margin:0 0 10px 0;}
 .bl_bottom_s_text h3{margin:0 0 7px 0;}
-.bl_one_product_gallery{float:left;width:420px;height:420px;background:#f5f6f7;}
-.bl_one_product_descr{margin-left:452px;}
+.bl_one_product_descr{margin-left:290px;}
 .bl_one_product_d_top_inf{float:left;width:100%;margin-bottom:26px;}
 .bl_one_product_d_top_inf_col{float:left;width:50%;margin-top:-1px;border-top:1px solid #ebebe8;border-bottom:1px solid #ebebe8;font-size:14px;line-height:20px;padding:22px 50px 24px 50px;position:relative;box-sizing:border-box;-moz-box-sizing:border-box;}
 .inf_podzakaz:before{content:'';display:block;background:url(../img/ico_time.png) no-repeat;width:32px;height:32px;position:absolute;left:0;top:0;bottom:0;margin:auto 0;}
@@ -252,7 +251,7 @@
 .btn_basket{height:36px;line-height:36px;display:inline-block;vertical-align:top;border:1px solid #3aa090;background:#3aa090;color:#fff;font-weight:bold;font-size:14px;padding:0 28px 0 48px;position:relative;}
 .btn_favourite:before{content:'';display:block;position:absolute;left:14px;top:10px;width:20px;height:16px;background:url(../img/ico_pr_favourite.png) no-repeat;}
 .btn_basket:before{content:'';display:block;position:absolute;left:13px;top:10px;width:21px;height:17px;background:url(../img/ico_basket_btn.png) no-repeat;}
-.bl_one_product_d_top_buy_btns .product_count{height:30px;margin:0 11px;border:1px solid #cacaca;text-align:center;position:relative;display:inline-block;padding-left:12px;padding-right:12px;vertical-align:top;}
+.bl_one_product_d_top_buy_btns .product_count{margin:0 11px}
 .bl_one_product_d_top_buy_price .price_actual{font-weight:400;font-size:32px;margin-top:6px;}
 .bl_one_product_d_top_buy_price .price_actual span{color:#acacac;font-size:24px;}
 .bl_one_product_top{margin-bottom:45px;}
@@ -265,12 +264,6 @@
 .bl_product_other_image img{position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;}
 .bl_product_other_name{margin:0 0 10px 0;font-size:14px;font-weight:bold;}
 .bl_product_other_inf{margin-left:130px;padding-top:20px;}
-.bl_one_product_avail_h_tabs{float:left;}
-.bl_one_product_avail_h_r{float:right;}
-.bl_one_product_avail_h_tabs span{display:inline-block;vertical-align:top;height:43px;line-height:43px;color:#000;font-size:14px;font-weight:300;padding:0 38px;background:#f5f6f7;cursor:pointer;}
-.bl_one_product_avail_h_tabs span.active{background:#239387;color:#fff;}
-.bl_one_product_avail_head{float:left;width:100%;margin-bottom:25px;}
-.bl_one_product_avail_h_r select{border:1px solid #e7e7e7;padding-left:20px;border-radius:20px;height:38px;vertical-align:middle;width:300px;margin-left:15px;cursor:pointer;outline:none;background:url(../img/arrow_select.png) no-repeat 94% center;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .bl_apt_row{border-bottom:1px solid #ebebe8;}
 .bl_apt_row > div{display:inline-block;vertical-align:bottom;background:#effcf5;position:relative;top:2px;padding:0 4px;}
 .bl_apt_item_time span{display:block;}
@@ -327,7 +320,6 @@ z-index: 10;}
 .popup_basket_product .item_product_center{position:relative;}
 .p_bsket_product_status{position:absolute;right:-80px;top:30px;}
 .bl_basket_first_step_footer{text-align:right;}
-.bl_basket_first_step_footer:before{content:'';display:block;background:#3aa090;height:5px;border-radius:20px;margin-bottom:30px;}
 .bl_f_total_price{font-weight:bold;font-size:18px;margin:0 0 34px 0;}
 .btn{display:inline-block;vertical-align:top;color:#fff;background:#3aa090;height:43px;line-height:43px;padding:0 20px;border-radius:25px;font-size:16px;border:0;cursor:pointer;outline:none;}
 .bl_lk_head_links{margin-bottom:40px;}
@@ -811,7 +803,6 @@ body.inner_page div.title-search-result{margin-left:30px;max-width:622px;margin-
 .bl_one_article img[align="right"]{float:right;margin:0 0 16px 16px;}
 div.search-advanced-result{color:#000;font-weight:bold;}
 *::-ms-clear{display:none;}
-.cart-quantity{float:left;background:#f5f6f7;font-size:15px;line-height:15px;padding:7px 15px;border-radius:5px;margin-top:5px;}
 .item_product_price .price_actual{text-align:left;}
 .item_product_price{position:relative;}
 .item_product_price .cart-quantity{
