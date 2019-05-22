@@ -266,18 +266,8 @@
 .bl_product_other_inf{margin-left:130px;padding-top:20px;}
 .bl_apt_row{border-bottom:1px solid #ebebe8;}
 .bl_apt_row > div{display:inline-block;vertical-align:bottom;background:#effcf5;position:relative;top:2px;padding:0 4px;}
-.bl_apt_item_time span{display:block;}
-.bl_apt_item_addr{max-width:180px;}
-.bl_apt_item_time{width:110px;margin-left:80px;margin-right:30px;}
-.bl_apt_item_tel{width:150px;margin-right:50px;white-space:nowrap;padding-left:23px !important;box-sizing:border-box;}
-.bl_apt_item_tel:before{content:'';display:inline-block;vertical-align:middle;background:url(../img/ico_tel_sm.png) no-repeat;width:14px;height:14px;margin-right:7px;position:absolute;left:0;bottom:2px;}
-.bl_apt_item_time:before{content:'';display:block;left:-25px;top:0;bottom:0;position:absolute;background:url(../img/ico_time_sm.png) no-repeat 40% 90% #edf8ef;width:25px;}
-.bl_apt_item_status{width:137px;}
+
 .bl_apt_row+.bl_apt_row{margin-top:10px;}
-.bl_apt_item_status:before{content:'';display:block;left:-25px;top:0;bottom:0;position:absolute;background:url(../img/ico_status_default.png) no-repeat 4px 90% #fff;width:25px;}
-.bl_apt_item_status.status_green:before{background:url(../img/ico_status_green.png) no-repeat 4px 70% #effcf5;}
-.bl_apt_item_status.status_yellow:before{background:url(../img/ico_status_yellow.png) no-repeat 4px 70% #effcf5;}
-.bl_apt_item_status.status_red:before{background:url(../img/ico_status_red.png) no-repeat 4px 70% #effcf5;}
 .bl_one_product_descr_bottom{float:left;width:100%;margin-top:60px;border-top:1px solid #ebebe8;border-bottom:1px solid #ebebe8;}
 .bl_one_product_descr_head{text-transform:uppercase;padding:18px 0 17px 0;font-size:20px;position:relative;cursor:pointer;}
 .bl_one_product_descr_head:after{content:'';display:block;width:12px;height:7px;background:url(../img/arrow_show_descr.png) no-repeat;transform:rotate(180deg);position:absolute;top:0;bottom:0;margin:auto;right:20px;-webkit-transition:all 0.3s ease;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;-ms-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
@@ -321,7 +311,6 @@ z-index: 10;}
 .p_bsket_product_status{position:absolute;right:-80px;top:30px;}
 .bl_basket_first_step_footer{text-align:right;}
 .bl_f_total_price{font-weight:bold;font-size:18px;margin:0 0 34px 0;}
-.btn{display:inline-block;vertical-align:top;color:#fff;background:#3aa090;height:43px;line-height:43px;padding:0 20px;border-radius:25px;font-size:16px;border:0;cursor:pointer;outline:none;}
 .bl_lk_head_links{margin-bottom:40px;}
 .bl_lk_head_links a{display:block;float:left;border:1px solid #ebebe8;height:43px;line-height:43px;padding:0 50px;color:#000000;margin-left:-1px;font-weight:300;}
 .bl_lk_head_links a.active{background:#3aa090;color:#fff;font-weight:400;}
@@ -448,8 +437,8 @@ z-index: 10;}
 .item_product_image .item_label .item_label_recept:hover div, .item_product_image .item_label .item_label_time:hover div{z-index:1;-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1);}
 .item_product_image .item_label .item_label_recept div, .item_product_image .item_label .item_label_time div{position:absolute;top:50px;background:#fff;left:10px;right:10px;padding:20px 15px 15px 15px;-webkit-box-shadow:0px 0px 10px 0px rgba(1, 2, 4, 0.25);box-shadow:0px 0px 10px 0px rgba(1, 2, 4, 0.25);z-index:-1;-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0);transform:scale(0);-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;transition:all 0.5s ease;}
 .item_product_image .item_label .item_label_recept div:after, .item_product_image .item_label .item_label_time div:after{position:absolute;top:-13px;right:10px;content:"";border-bottom:13px solid #fff;border-left:12px solid transparent;border-right:2px solid transparent;}
-.item_product_image .item_label .item_label_recept{background-color:#cd1c1c;background-image:url("../img/label-recept.png");}
-.item_product_image .item_label .item_label_time{background-color:#dfdfdf;background-image:url("../img/label-time.png");}
+.item_product_image .item_label .item_label_recept{background-color:#99C945;background-image:url("../img/label-recept.png");}
+.item_product_image .item_label .item_label_time{background-color:#99C945;background-image:url("../img/label-time.png");}
 .item_product_image .item_label .item_label_sale{background-image:url("../img/label-persent.png");background-color:#db1e4f;}
 .item_product_image .item_label .item_label_new{background-image:url("../img/label-new.png");background-color:#ffbb05;}
 .left_catalog .left_catalog_hide_active{position:relative;}
@@ -465,8 +454,8 @@ z-index: 10;}
 .item_label_recept:hover div, .item_label_time:hover div{z-index:1;-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1);}
 .item_label_recept div, .item_label_time div{position:absolute;top:50px;text-align:center;background:#fff;left:10px;right:10px;padding:20px 15px 15px 15px;-webkit-box-shadow:0px 0px 10px 0px rgba(1, 2, 4, 0.25);box-shadow:0px 0px 10px 0px rgba(1, 2, 4, 0.25);z-index:-1;-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0);transform:scale(0);-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-o-transition:all 0.5s ease;transition:all 0.5s ease;}
 .item_label_recept div:after, .item_label_time div:after{position:absolute;top:-13px;right:10px;content:"";border-bottom:13px solid #fff;border-left:12px solid transparent;border-right:2px solid transparent;}
-.item_label_recept{background-color:#cd1c1c;background-image:url("../img/label-recept.png");}
-.item_label_time{background-color:#dfdfdf;background-image:url("../img/label-time.png");}
+.item_label_recept{background-color:#99C945;background-image:url("../img/label-recept.png");}
+.item_label_time{background-color:#99C945;background-image:url("../img/label-time.png");}
 .item_product_center .item_label_time + .item_label_recept div:after{right:45px;}
 .item_product_center .item_label_time div, .item_product_center .item_label_recept div{top:auto;top:initial;bottom:-10px;left:44%;right:0%;}
 .item_product_center .item_label_time div:after, .item_product_center .item_label_recept div:after{top:initial;right:5px;bottom:-20px;border:none;border-left:6px solid transparent;border-right:9px solid transparent;border-top:24px solid #fff;}

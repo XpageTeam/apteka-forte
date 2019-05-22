@@ -4,6 +4,9 @@ window.jQuery = $
 window.$ = $
 
 document.addEventListener("DOMContentLoaded", e => {
+
+	$(".fancybox").fancybox()
+
 	$(".bl_one_product_descr_cont, .bl_one_product_descr_cont_1").each((i, el) => {
 		let $this = $(el),
 			text = $this.text();
