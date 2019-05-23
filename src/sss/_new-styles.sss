@@ -211,17 +211,17 @@
 		.bl_apt_row
 			position: relative
 			display: flex
-			justify-content: flex-start
+			justify-content: space-between
 			align-items: center
 			border: 0
 
-
+			.radio input[type=radio] + label>span:after
+				display: none !important
 
 
 		.bl_one_product_avail_cont .btn
 			width: 170px
 			text-align: center
-			margin-left: auto
 			z-index: 10
 
 
@@ -269,6 +269,7 @@
 
 		.bl_apt_row__top
 			display: flex !important
+			justify-content: space-between
 			align-items: center
 			width: 100%
 
@@ -278,7 +279,8 @@
 			border-collapse: collapse
 
 		.cart-table thead
-			background: #f5f6f7
+			background: #EDF8EF
+			border-radius: 7px
 
 
 
@@ -325,10 +327,10 @@
 			color: #acacac
 
 
-		.bl_apt_row.info-open
-			border: 4px solid #f5f6f7
-			padding: 25px 45px 45px 22px
+		.bl_apt_row
 
+			.btn
+				line-height: 38px
 
 
 		.bl_apt_row__info
@@ -339,7 +341,7 @@
 			.cart-title
 				font-weight: bold
 				font-size: 14px
-				color: #239387
+				color: #003399
 
 			.cart-subtitle
 				color: #bebebe
@@ -411,12 +413,13 @@
 
 
 		.basket-delivery .form_row select
-			height: 53px
-			min-width: 317px
+			height: 41px
+			min-width: 240px
 			padding: 0 40px 0 20px
 			font-size: 14px
-			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAQAAADoz+32AAAAKklEQVQIHQXBMQEAIAwDsJhgAw2Y5uCrItyQcDVgOZQoTDGgxRYDoD0FH7Y7BdeMLHL8AAAAAElFTkSuQmCC) no-repeat right 10px center
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAQAAADoz+32AAAAKklEQVQIHQXBMQEAIAwDsJhgAw2Y5uCrItyQcDVgOZQoTDGgxRYDoD0FH7Y7BdeMLHL8AAAAAElFTkSuQmCC) no-repeat right 10px center, #fff
 			-webkit-appearance: none
+			border-radius: 0
 
 
 
@@ -424,10 +427,16 @@
 			display: none
 
 
-		.bl_apt_row.info-open .bl_apt_row__top .btn
-			background: #fff
-			border: 2px solid #239387
-			color: #239387
+		.bl_apt_row
+
+			&:not(.info-open)
+
+				.bl_apt_row__top 
+
+					.btn
+						background: #effcf5
+						border: 1px solid #99C945
+						color: #99C945
 
 
 		.bl_apt_row.info-open .bl_apt_row__info
@@ -449,7 +458,8 @@
 
 		.basket-delivery__top
 			display: flex
-			flex-wrap: wrap
+			flex-direction: column
+			align-items: flex-start
 
 
 		.basket-delivery__item
@@ -578,7 +588,7 @@
 	width: 31px
 	height: 31px
 	border-radius: 50%
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAABN0lEQVQYGQXBTWsPAADA4d+/LQc5+QRKbQd5p3ahUA7Le3lL7QMouTjIxUG+gJPchHYiKW0tk2mltlpeyk3U0k6KGNF4PE+SJIdN+uSHVcseOWYgSUkyag6vXHfWGdfM+WfRTklJ9vtpwZgkSXZ47o9xKckpt62T5KKrkgzcsWa7kgs2SpI8Ni9J8sJbw9mHXZIkk2YkSUZxIne9MZAkmTQjSZJZU/ngpiRJJk1LkuSylXw1IUmShxYkSTJuNd9MSJLkvN/uWy9Jxq3moxuSJMkhXywZkeSSlTywJEmSZJPXFg0kM2ZyALslSZJssE2yGaeTeUuGJEmSJHnmveFkxC/3DEmSJMkt7FWSg1a9tEeSJFs8teaklCRbLWDWFUcdcdmUv94Zk5QkGTjuiWXf/fDZtHOGJek/7TSUgNHjFLEAAAAASUVORK5CYII=) no-repeat center, #3aa090
+	background: url(data:image/png base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAABN0lEQVQYGQXBTWsPAADA4d+/LQc5+QRKbQd5p3ahUA7Le3lL7QMouTjIxUG+gJPchHYiKW0tk2mltlpeyk3U0k6KGNF4PE+SJIdN+uSHVcseOWYgSUkyag6vXHfWGdfM+WfRTklJ9vtpwZgkSXZ47o9xKckpt62T5KKrkgzcsWa7kgs2SpI8Ni9J8sJbw9mHXZIkk2YkSUZxIne9MZAkmTQjSZJZU/ngpiRJJk1LkuSylXw1IUmShxYkSTJuNd9MSJLkvN/uWy9Jxq3moxuSJMkhXywZkeSSlTywJEmSZJPXFg0kM2ZyALslSZJssE2yGaeTeUuGJEmSJHnmveFkxC/3DEmSJMkt7FWSg1a9tEeSJFs8teaklCRbLWDWFUcdcdmUv94Zk5QkGTjuiWXf/fDZtHOGJek/7TSUgNHjFLEAAAAASUVORK5CYII=) no-repeat center, #3aa090
 
 
 
@@ -590,7 +600,7 @@
 
 	max-width: 300px
 	padding-left: 55px
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAAzFBMVEU6oJD///86oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJDUw8jnAAAAQ3RSTlMAAAIGBwsPEBESFBUWFx4fIi8wMzY3P0JERkpOT1BVWVpgZnB3foiKi46QlJiZqaqwtLu+wMLMztPb5Oju8Pb6/P3+ZAOi2AAAAaxJREFUOMuFlGt3mkAQhl+8VGqrjZtevDUm1mrqJdCt0goops///0/9ABwOwdD5sOfw8pzZmdmZkQprTdaH6MLf6Ef6/XH9WXIcpyD6mxOZPabKA99KTHuVQLidmV7n3eDDVcYcYT9qqGRlZnwmnJb+f/J9/zd/fN//kjLjBNst+/iax8aDI0nmzFOzjOiNMeY7j8aYt46k9hH7EnkZz4qwq3qmnzDVf5gNe0mSO/dAku488O4kNTutlGmdGEmSLICkOQQBzDNnjuNoQpiWbuEtQXJhIS3ALZg12/z+IWSHBMOCOTArMS64+SlJg18/FWFKjCw7191hM3FApAu9MuMGAHHmRu95FnTKd1liG0CQQR2o+PHYudIwxkvFHpdKPFlCNk1PMkSVvILcT5CKMw6V+tzGYAOIb1Nxy7qoc57XzTKAYHmTao2QSfFe123EqVW8+3Xbs6ntH0lTkn5tH0rdkJVT289qWo5t59W5kKTmE2eTz+CV+ZLUtSTjujmVpiHncd28N0Z7OBpd2xv3ptfpmfttCMmqLb2+f4DTpl/0c3WPXaLDetJSMTv/AMulVccoVwANAAAAAElFTkSuQmCC) no-repeat left 0 top 0
+	background: url(data:image/png base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAAzFBMVEU6oJD///86oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJA6oJDUw8jnAAAAQ3RSTlMAAAIGBwsPEBESFBUWFx4fIi8wMzY3P0JERkpOT1BVWVpgZnB3foiKi46QlJiZqaqwtLu+wMLMztPb5Oju8Pb6/P3+ZAOi2AAAAaxJREFUOMuFlGt3mkAQhl+8VGqrjZtevDUm1mrqJdCt0goops///0/9ABwOwdD5sOfw8pzZmdmZkQprTdaH6MLf6Ef6/XH9WXIcpyD6mxOZPabKA99KTHuVQLidmV7n3eDDVcYcYT9qqGRlZnwmnJb+f/J9/zd/fN//kjLjBNst+/iax8aDI0nmzFOzjOiNMeY7j8aYt46k9hH7EnkZz4qwq3qmnzDVf5gNe0mSO/dAku488O4kNTutlGmdGEmSLICkOQQBzDNnjuNoQpiWbuEtQXJhIS3ALZg12/z+IWSHBMOCOTArMS64+SlJg18/FWFKjCw7191hM3FApAu9MuMGAHHmRu95FnTKd1liG0CQQR2o+PHYudIwxkvFHpdKPFlCNk1PMkSVvILcT5CKMw6V+tzGYAOIb1Nxy7qoc57XzTKAYHmTao2QSfFe123EqVW8+3Xbs6ntH0lTkn5tH0rdkJVT289qWo5t59W5kKTmE2eTz+CV+ZLUtSTjujmVpiHncd28N0Z7OBpd2xv3ptfpmfttCMmqLb2+f4DTpl/0c3WPXaLDetJSMTv/AMulVccoVwANAAAAAElFTkSuQmCC) no-repeat left 0 top 0
 	color: #3aa090
 	text-align: left
 	font-size: 14px
@@ -1528,16 +1538,18 @@ div[id^="tab-"]:not(#tab-sale)
 		width: 150px
 		margin-right: 50px
 		white-space: nowrap
+		background: #effcf5
 		padding-left: 23px !important
 		box-sizing: border-box
+		width: auto !important
 		
 		&:before
 			content: ''
 			display: inline-block
 			vertical-align: middle
-			background: url(../img/ico_tel_sm.png) no-repeat
-			width: 14px
-			height: 14px
+			background: url(../img/ico-phone.svg) no-repeat
+			width: 13px
+			height: 13px
 			margin-right: 7px
 			position: absolute
 			left: 0
@@ -1560,3 +1572,56 @@ div[id^="tab-"]:not(#tab-sale)
 	border: 0
 	cursor: pointer
 	outline: none
+
+.checkbox input[type="checkbox"]
+	display: none
+
+.checkbox input[type="checkbox"] + label span
+	display: inline-block
+	width: 27px
+	height: 25px
+	margin: 0 5px 0
+	vertical-align: middle
+	background: #fff
+	cursor: pointer
+	position: absolute 0 * * 0
+	border: 1px solid #E6F1EC
+.checkbox input[type="checkbox"]:checked + label span
+	background: url(../img/ico-checkebox.svg) no-repeat center center #fff
+.checkbox label
+	display: inline-block
+	cursor: pointer
+	font-size: 13px
+	line-height: 17px
+	color: #000
+	position: relative
+	padding-left: 42px
+	min-height: 25px
+	padding-top: 4px
+.f_checkbox + .f_checkbox, .radio + .radio
+	margin-top: 8px 
+.radio input[type="radio"]
+	display: none 
+.radio input[type="radio"] + label span
+	display: inline-block 
+	size: 20px 
+	margin: 0 5px 0 
+	vertical-align: middle 
+	background: #fff
+	cursor: pointer 
+	border-radius: 50% 
+	position: relative 
+.radio input[type="radio"]:checked + label > span:after
+	content: '' 
+	display: block 
+	position: absolute 0
+	background: #99C945
+	border-radius: 50% 
+	margin: auto 
+	size: 8px
+.radio label
+	display: inline-block 
+	cursor: pointer 
+	font-size: 13px 
+	line-height: 20px 
+	position: relative 
