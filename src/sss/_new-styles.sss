@@ -557,14 +557,23 @@
 				box-sizing: border-box
 				-moz-box-sizing: border-box
 
-
-
-
-
-
-
-
 //end
+
+.bl_one_product_avail_cont
+	float: left
+	overflow-y: scroll
+	width: calc(100% + 20px)
+	box-sizing: border-box
+	height: 296px
+
+	&::-webkit-scrollbar
+		width: 9px
+
+	&::-webkit-scrollbar-track
+		background: #eee
+
+	&::-webkit-scrollbar-thumb
+		background: var(--main-color)
 
 .item_product_predzakaz
 	position: relative
@@ -1261,6 +1270,8 @@ div[id^="tab-"]:not(#tab-sale)
 				z-index: 2
 				pointer-events: none
 
+
+
 .bl_one_product_descr_cont, .bl_one_product_descr_cont_1
 
 	> *:not(:last-child)
@@ -1436,13 +1447,34 @@ div[id^="tab-"]:not(#tab-sale)
 	justify-content: space-between
 	align-items: center
 
-.bl_one_product_gallery
-	float: left
-	width: 290px 
-	height: 420px
+.bl_one_product
+	&_top
+		display: flex
+		margin-bottom: 45px
 
-	&_item
-		width: 290px
+
+	&_gallery
+		float: left
+		width: 290px 
+		margin-right: 30px
+
+		&_item
+			width: 290px
+
+	&_d_top_buy
+		display: flex
+		align-items: center
+
+	&_descr
+		display: flex
+		flex-direction: column
+
+.price_actual
+	font-weight: 400
+	font-size: 32px
+	line-height: 1
+	white-space: nowrap
+
 
 .bl_one_product_descr_cont_1, .bl_one_product_middle
 	float: left
@@ -1611,6 +1643,7 @@ div[id^="tab-"]:not(#tab-sale)
 	cursor: pointer 
 	border-radius: 50% 
 	position: relative 
+
 .radio input[type="radio"]:checked + label > span:after
 	content: '' 
 	display: block 
@@ -1619,9 +1652,62 @@ div[id^="tab-"]:not(#tab-sale)
 	border-radius: 50% 
 	margin: auto 
 	size: 8px
+
 .radio label
 	display: inline-block 
 	cursor: pointer 
 	font-size: 13px 
 	line-height: 20px 
 	position: relative 
+
+
+@media screen and (max-width: 1200px)
+
+	.bl_one_product
+		&_top
+			flex-direction: column
+
+		&_gallery
+			margin-right: 0
+			height: auto
+
+			&_item
+				height: auto
+
+		&_descr 
+			.bl_one_product_anons
+				margin-bottom: 20px
+
+@media screen and (max-width: 1000px)
+
+	.bl_one_product_gallery
+		width: 100%
+
+
+@media screen and (max-width: 667px)
+
+	.bl_one_product
+		&_gallery_item
+			width: 100%
+
+		&_d_top_buy
+			flex-direction: column
+			align-items: flex-start
+
+		&_d_top_buy_btns
+
+			.product_count
+				margin-left: 0
+
+	.cart-quantity
+		padding: 0
+
+	.bl_one_product_avail_h_r
+		float: left
+
+	.bl_one_product_top
+		margin-bottom: 15px
+
+	.bl_one_product_avail_cont
+		width: 100%
+

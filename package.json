@@ -11,7 +11,7 @@
   "author": "danil.khandys",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.4.5",
     "autoprefixer": "^9.5.1",
     "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
@@ -35,7 +35,7 @@
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^7.0.0",
     "imports-loader": "^0.8.0",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.16",
     "postcss-assets": "^5.0.0",
     "postcss-attribute-case-insensitive": "^3.0.1",
     "postcss-flexbugs-fixes": "^4.1.0",
@@ -51,12 +51,12 @@
     "resolve-url-loader": "^3.1.0",
     "style-loader": "^0.23.0",
     "sugarss": "^2.0.0",
-    "ts-loader": "^5.3.3",
-    "typescript": "^3.4.3",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.4.5",
     "url-loader": "^1.1.2",
     "vinyl-ftp": "^0.6.1",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
     "jquery": "^3.4.1"

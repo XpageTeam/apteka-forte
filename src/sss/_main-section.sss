@@ -61,3 +61,74 @@
 
 			&__item
 				width: calc((100% - 60px * 5) / 5)
+
+@media screen and (max-width: 1200px)
+	
+	.main-section
+		margin: 20px 0 0
+
+		&__catalog
+			&:not(:first-child)
+				margin-left: 20px
+
+		&__links
+			width: 315px
+
+	.m-catalog
+
+		&--full
+
+			.catalog-list
+				margin: 20px 0 -20px -20px
+
+				&__item
+					width: calc((100% - 20px * 5) / 5)
+
+
+@media screen and (max-width: 1000px)
+	
+	.main-section
+		flex-direction: column-reverse
+
+		&__catalog:not(:first-child)
+			margin: 0 0 20px 0
+
+		&__links
+			width: 100%
+
+@media screen and (max-width: 667px)
+	
+	.m-catalog, .main__links
+		padding: 15px
+
+	.m-catalog
+
+		&--full
+
+			.catalog-list
+				margin: 20px 0 -20px -20px
+
+				&__item
+					width: calc((100% - 60px * 2) / 2)
+
+
+
+@media screen and (max-width: 660px)
+
+	.m-catalog
+
+		&--full
+
+			.catalog-list 
+				margin: 30px 0 0 0 
+
+				&__item
+					width: 100%
+					margin: 0
+					justify-content: center
+
+					&:not(:first-child)
+						margin-top: 20px
+
+
+

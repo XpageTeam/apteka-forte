@@ -1,7 +1,10 @@
+// import "./standart-page.js";
+
 import $ from "jquery"
 
 window.jQuery = $
 window.$ = $
+
 
 document.addEventListener("DOMContentLoaded", e => {
 
@@ -58,4 +61,48 @@ document.addEventListener("DOMContentLoaded", e => {
 		$(this).toggleClass('active');
 		$('.bl_one_product_descr_cont').slideToggle();
 	});
+
+	$("header").on("click", ".h_city", function(){
+		var $this = $(this);
+
+		if ($this.hasClass("locked"))
+			return false;
+
+		$this.toggleClass("opened");
+
+		$this.children(".h_city_list").slideToggle(500);
+
+		if (!$this.hasClass("paned")){
+			$this.addClass("paned");
+			setTimeout(function(){
+				// $this.children(".h_city_list").jScrollPane();
+				// $("header").on("click", ".h_city .jspVerticalBar", function(){
+				// 	$(".h_city").addClass("locked");
+				// 	setTimeout(function(){
+				// 		$(".h_city").removeClass("locked");
+				// 	}, 10)
+				// });
+			}, 500)
+		}
+	});
+
+	$('.burger').click(function(){
+		$('body').toggleClass('js__menu--open');
+	})
+
+	var menuTop = $('.h-menu').clone(),
+		footerLinks = $('.f-links').clone(),
+		soc = $('.h-contacts').clone(),
+		personalLinks = $('.h-personal__links').clone(),
+		menuBot = $('.f-menu__list').clone();
+
+	$('.mobile-menu').append(personalLinks);
+	$('.mobile-menu').append(menuTop);
+	$('.mobile-menu').append(menuBot);
+	$('.mobile-menu').append(footerLinks);
+	$('.mobile-menu').append(soc);
+
+
+	// var sideCart = $('.side-cart').clone();
+	
 })

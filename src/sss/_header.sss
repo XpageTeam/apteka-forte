@@ -33,10 +33,10 @@
 .h-b
 	display: flex
 	justify-content: space-between
-	align-items: flex-end
+	align-items: flex-start
 
 	&__nav
-		align-self: center
+		// align-self: center
 
 	&__logo
 
@@ -107,7 +107,7 @@
 			color: #5EAADA
 
 		&.active
-			font-size: 30px
+			font-size: 26px
 			color: #000
 			font-weight: 500
 			text-decoration: none
@@ -191,3 +191,382 @@
 
 	&__example
 		font-size: 12px
+
+.h_city
+	position: relative
+	color: var(--second-color)
+	cursor: pointer
+	font-size: 13px
+	padding: 0 25px 0 25px
+	white-space: nowrap
+
+	&_list
+		background: #fff
+		z-index: 10
+		position: absolute
+		top: 100%
+		left: 0
+		margin-right: -10px
+		border: 1px solid #f5f6f8
+		display: none
+		height: 328px
+		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, .2)
+		overflow-y: auto
+
+		&::-webkit-scrollbar 
+			width: 12px
+
+
+		&::-webkit-scxrollbar-track
+			background: #eee
+
+		&::-webkit-scrollbar-thumb
+			background: var(--main-color)
+
+		a
+			font-size: 14px
+			color: #000
+			padding: 6px 32px 6px 25px
+			display: block
+			transition: background 0.5s ease
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: calc(50% - 10px)
+		left: 0
+		size: 20px
+		background-image: url("../img/ico-location.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+
+
+
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		top: calc(50% - 3px)
+		right: 10px
+		size: 4px
+		border-bottom: 1px solid #000
+		border-right: 1px solid #000
+		transform: rotate(45deg)
+.h_bl
+	display: inline-block
+	vertical-align: top
+	// height: 47px
+	font-size: 13px
+	letter-spacing: 0
+
+.h-city
+	&__label
+		color: var(--second-color)
+
+.mobile
+	&-menu, &-logo 
+		display: none
+
+.head-burger
+	display: none
+
+
+.burger
+	position: relative
+	z-index: 150
+	display: flex
+	justify-content: center
+	align-items: center
+	box-sizing: content-box
+	width: 40px
+	height: 30px
+	padding: 15px
+	background: 0 0
+	border: 0
+	user-select: none
+	margin: -15px 0
+	margin-right: -15px
+	cursor: pointer
+	&:before
+		display: none
+
+	span
+		position: relative
+		display: inline-block
+		width: 40px
+		height: 2px
+		border-radius: 5px
+		vertical-align: bottom
+		background: var(--second-color)
+		transition: background .2s .4s
+
+		&:before
+			border-radius: 5px
+			transform: none
+			content: ""
+			position: absolute
+			left: 0
+			top: 8px
+			width: 100%
+			height: 2px
+			background: var(--second-color)
+			transform-origin: 50% 50%
+			transition: top .3s .3s,transform .3s
+
+		&:after
+			border-radius: 5px
+			content: ""
+			position: absolute
+			left: 0
+			top: -8px
+			width: 100%
+			height: 2px
+			background: var(--second-color)
+			transform-origin: 50% 50%
+			transition: top .3s .3s,transform .3s
+
+.js__menu--open
+	position: fixed
+	width: 100%
+
+	// .page-wr
+
+	.head-burger
+		z-index: 500
+
+	.page-wr
+		transform: translate3d(-260px, 0, 0)
+
+		&:before
+			opacity: 1
+			visibility: visible
+	.burger>span
+		background: 0 0
+
+	.burger>span::before
+		transform: rotate3d(0,0,1,45deg)
+		top: 0
+		transition: top .3s,transform .3s .5s
+		background: #fff
+
+	.burger>span::after
+		transform: rotate3d(0,0,1,-45deg)
+		top: 0
+		transition: top .3s,transform .3s .5s
+		background: #fff
+
+
+
+
+.mobile-menu
+	display: flex
+	flex-direction: column
+	// top: 0
+	// right: 0
+	// bottom: 0
+	background: linear-gradient(to bottom, rgb(221, 253, 229), rgb(219, 254, 220))
+	overflow-y: auto
+
+	&-cont
+		// position: absolute
+		position: fixed
+		top: 0
+		bottom: 0
+		width: 260px
+		right: 0
+		overflow: auto
+		height: 100%
+		-webkit-overflow-scrolling: touch
+
+
+@media screen and (max-width: 1200px)
+	
+	.h-t
+		&:after, &:before
+			display: none
+
+	.head
+		&__bot
+			padding: 25px 0 0
+
+	.h-menu__link.active
+		font-size: 19px
+
+	.h-contacts a
+		font-size: 17px
+
+@media screen and (max-width: 1000px)
+
+	.h-b
+		flex-wrap: wrap
+
+	.h-another
+		display: flex
+		justify-content: space-between
+		margin-top: 30px
+
+		&__contacts
+			margin-bottom: 0
+
+	.h-b__right
+		flex: 1 1 auto
+
+	.h-contacts
+		&__phone,&__viber, &__vk
+			&:before
+				right: auto
+				left: 0
+
+		a
+			margin-left: 28px
+
+@media screen and (max-width: 667px)
+
+	.head-burger, .mobile-logo
+		display: block
+
+	.mobile-logo
+		max-width: 120px
+
+	.head
+		&__bot
+			display: none
+
+		&__top
+			padding: 20px 0
+
+
+	.h-cart
+		&__info
+			display: none
+
+		&__link
+			&-label
+				display: none
+
+		&__num
+			position: absolute
+			top: -10px
+			right: -5px
+			border-radius: 50%
+			background: #fff
+			border: 1px solid var(--second-color)
+			size: 20px
+			line-height: 18px
+			text-align: center
+
+		&__empty
+			display: none
+
+	.h-b
+		&__nav
+			display: none
+
+		&__right
+			display: none
+
+	.h-t
+		&__city
+			display: none
+
+		&__cart
+			position: relative
+
+	.h-menu, .f-menu__list, .f-links, .h-personal__links
+		margin: 0 !important
+
+		li 
+			display: block !important
+			margin: 0 !important
+
+		a
+			padding: 15px
+			font-size: rem(15)
+			text-decoration: none
+			font-weight: 300
+			border-bottom: 1px solid var(--second-color)
+			text-transform: uppercase
+			display: block
+	
+	.h-personal__links
+		order: -1
+		display: flex
+		border-bottom: 1px solid var(--second-color)
+
+		.sign-in
+			margin: 0 !important
+			border-right: 1px solid #eee !important
+
+			&:before
+				display: none
+
+		li
+			width: 50%
+
+			&:last-child
+				display: none !important
+
+		a 
+			font-size: rem(12)
+			border: 0 !important
+			text-align: center
+	
+	.s_bl_city
+		padding: 0
+		border-bottom: 1px solid var(--second-color)
+
+
+	.h-contacts
+		display: flex
+		padding: 15px
+
+
+		> div
+			position: relative
+
+			&:not(:first-child)
+				margin: 0 0 0 20px !important
+
+			&:before
+				size: 100%
+				top: 0
+				left: 0
+				background-size: cover!important
+				background-position: center
+		a
+			font-size: 0
+			display: block
+			size: 30px
+			text-decoration: none
+			margin: 0 !important
+			border: 0 !important
+
+	.header_left_city
+		position: relative
+		font-size: rem(16)
+
+		&:after
+			content: ''
+			position: absolute
+			top: calc(50% - 3px)
+			right: 15px
+			size: 6px
+			border-right: 1px solid #000
+			border-bottom: 1px solid #000
+			transform: rotate(45deg)
+
+		select
+			margin: 0
+			width: 100%
+			color: var(--second-color)
+
+
+	.get_city_select
+		padding: 15px
+		margin: 0
+
+
+

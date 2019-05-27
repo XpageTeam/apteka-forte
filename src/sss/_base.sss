@@ -60,20 +60,41 @@ address
 	font-weight: inherit
 
 body
-	min-width: 980px
+	min-width: 320px
 	line-height: lh(22, 16)
 	font-family: var(--default-font)
 	// font-weight: 400
 	font-size: 14px
-	background: linear-gradient(to bottom, rgb(221, 253, 229), rgb(219, 254, 220))
 	color: #414141
-	position: relative
 	left: 0
 	display: flex
 	flex-direction: column
 	width: 100%
 	min-height: 100vh
 	overflow-y: scroll
+
+.page-wr
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	z-index: 10
+	background: linear-gradient(to bottom, rgb(221, 253, 229), rgb(219, 254, 220))
+	transition: transform .3s ease
+
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0, 0.75)
+		z-index: 400
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.5s ease
+
 
 select
 	background: none

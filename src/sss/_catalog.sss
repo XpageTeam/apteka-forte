@@ -11,6 +11,7 @@
 				font-size: 17px
 
 	&__item
+		display: flex
 		width: calc((100% - 60px * 3) / 3)
 		margin: 0 0 40px 60px
 
@@ -41,5 +42,26 @@
 		&--last
 			text-decoration: line-through
 
+@media screen and (max-width: 1200px)
+	
+	.catalog-list
+		margin: 20px 0 -20px -20px
 
+		&__item
+			width: calc((100% - 20px * 3) / 3)
+			margin: 0 0 20px 20px
+
+@media screen and (max-width: 667px)
+	
+	.catalog-list__item
+		width: calc((100% - 60px)/2)
+
+
+@media screen and (max-width: 660px)
+
+	.catalog-list
+		&__item
+			display: flex
+			justify-content: center
+			width: 100%
 
