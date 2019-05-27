@@ -1,2 +1,475 @@
-!function(t){var e={};function n(r){if(e[r])return e[r].exports;var o=e[r]={i:r,l:!1,exports:{}};return t[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)n.d(r,o,function(e){return t[e]}.bind(null,o));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=2)}([,,function(t,e,n){var r,o;r=[n,e,n(3)],void 0===(o=function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),n.App.domReady(function(){window.addEventListener("load",function(){var t=0;n.App.each(".cat-item__img",function(e,n){t<parseInt(getComputedStyle(e).height)&&(t=parseInt(getComputedStyle(e).height))}),n.App.each(".cat-item__img",function(e,n){e.style.height=t+"px"})})})}.apply(e,r))||(t.exports=o)},function(t,e,n){var r,o,i=this&&this.__extends||(o=function(t,e){return(o=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(t,e){t.__proto__=e}||function(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n])})(t,e)},function(t,e){function n(){this.constructor=t}o(t,e),t.prototype=null===e?Object.create(e):(n.prototype=e.prototype,new n)});void 0===(r=function(t,e){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var n=function(){function t(){}return t.domReady=function(t){try{document.addEventListener("DOMContentLoaded",t)}catch(t){throw Error(t)}},t.getElements=function(t){var e=document.querySelectorAll(t);return e.length?e:[]},t.getElement=function(t){return document.querySelector(t)},t.elementsGetter=function(e){return t.transformNodeListToArray(document.querySelectorAll(e))},t.transformNodeListToArray=function(t){try{return Array.prototype.slice.call(t)}catch(t){throw Error(t)}},t.wrap=function(e,n){var r;"string"==typeof n?r=document.createElement(n):n instanceof HTMLElement&&(r=n),t.each(e,function(t,e){r.innerHTML=t.outerHTML,t.parentNode.replaceChild(r,t)})},t.each=function(e,n){if(n){"string"==typeof e?e=t.transformNodeListToArray(t.getElements(e)):e instanceof NodeList&&(e=t.transformNodeListToArray(e));for(var r=0,o=0,i=e;o<i.length;o++){n(i[o],r),r++}}else console.error("Callback does not exists in yours 'each'")},t}();e.App=n;var r=function(){function t(e){if(this._length=0,"string"==typeof e)this.els=n.elementsGetter(e);else if(e instanceof HTMLElement)this.els=[e];else if(e instanceof NodeList)this.els=n.transformNodeListToArray(e);else if(e instanceof Array&&(e[0]instanceof HTMLElement||!e.length))this.els=e;else{if(!(e instanceof t))throw Error("Invalid selector: "+e);this.els=e.els}}return Object.defineProperty(t.prototype,"els",{get:function(){return this._els},set:function(t){this._els=t,this._length=t.length||0},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"length",{get:function(){return this._length},enumerable:!0,configurable:!0}),t.prototype.is=function(t){var e;return"string"==typeof t?e=n.elementsGetter(t):t instanceof HTMLElement&&(e=[t]),this.els[0]==e[0]},t.prototype.has=function(e){var r;if("string"==typeof e)r=n.elementsGetter(e);else if(e instanceof HTMLElement)r=[e];else if(e instanceof t)r=e._els;else if(e instanceof NodeList)r=n.transformNodeListToArray(e);else{if(!(e instanceof Array&&(e[0]instanceof HTMLElement||!e.length)))throw Error("Invalid selector: "+e);r=e}for(var o=!1,i=0,s=this.els;i<s.length;i++){for(var a=s[i],c=0,u=r;c<u.length;c++){var l=u[c];if(a.contains(l)){o=!0;break}}if(o)return!0}return!1},t.prototype.addClass=function(t){return n.each(this.els,function(e){e.classList.add(t)}),this},t.prototype.removeClass=function(t){return n.each(this.els,function(e){e.classList.remove(t)}),this},t.prototype.toggleClass=function(t,e){return void 0===e&&(e=function(){}),n.each(this.els,function(n){n.classList.contains(t)?(n.classList.remove(t),e(!1)):(n.classList.add(t),e(!0))}),this},t.prototype.hasClass=function(t){for(var e=0,n=this.els;e<n.length;e++){if(n[e].classList.contains(t))return!0}return!1},t.prototype.find=function(e){var r=new Array;return n.each(this.els,function(t){var o=t.querySelectorAll(e);if(o.length)for(var i=0,s=n.transformNodeListToArray(o);i<s.length;i++){var a=s[i];r.push(a)}}),new t(r)},t}();e.Element=r;var o=function(t){function e(){return null!==t&&t.apply(this,arguments)||this}return i(e,t),e.prototype.add=function(t,e,r){return n.each(this.els,function(n){n.addEventListener(t,function(t){e(this,t)},r)}),this},e.prototype.trigger=function(t){return n.each(this.els,function(e){var n=document.createEvent("HTMLEvents");n.initEvent(t,!1,!0),e.dispatchEvent(n)}),this},e}(r);e.EventListener=o;var s=function(){function t(t){this._state=!1,this._error=!1,this.menuActiveClass="js__opened",this.bodyActiveClass="js__menu-opened",this.body=n.getElement("body"),this._settings=t,this.burger=n.getElement(t.burger),this.menu=n.getElement(t.menu),this.bindEvents()}return Object.defineProperty(t.prototype,"error",{set:function(t){this._error=!0,console.error(t+". Меню не работает")},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"state",{get:function(){return this._state},set:function(t){this._state=t},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"menu",{get:function(){return this._menu},set:function(t){t instanceof HTMLElement?this._menu=t:this.error="Меню не найдено"},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"burger",{get:function(){return this._burger},set:function(t){t instanceof HTMLElement?this._burger=t:this.error="Бургер не найден"},enumerable:!0,configurable:!0}),Object.defineProperty(t.prototype,"settings",{get:function(){return this._settings},enumerable:!0,configurable:!0}),t.prototype.openMenu=function(){if(window.matchMedia(this.settings.media).matches)return this.settings.fixBody&&(this.body.style.top=-window.pageYOffset+"px",this.body.style.position="fixed"),this.burger.classList.add("js__active"),this.menu.classList.add(this.menuActiveClass),this.body.classList.add(this.bodyActiveClass),this.state=!0,this},t.prototype.closeMenu=function(){if(window.matchMedia(this.settings.media).matches&&this.state){var t=0;return this.settings.fixBody&&(t=Math.abs(parseInt(this.body.style.top)),this.body.style.top="",this.body.style.position=""),this.burger.classList.remove("js__active"),this.menu.classList.remove(this.menuActiveClass),this.body.classList.remove(this.bodyActiveClass),this.settings.fixBody&&window.scrollTo(0,t),this.state=!1,this}},t.prototype.toggleMenu=function(){if(window.matchMedia(this.settings.media).matches)return this.state?this.closeMenu():this.openMenu(),this},t.prototype.bindEvents=function(){var t=this;document.addEventListener("click",function(e){var n=new r(e.target);n.is(t.burger)||new r(t.burger).has(n)||n.is(t.menu)||new r(t.menu).has(n)||t.closeMenu()}),new o(this.burger).add("click",function(e){t.toggleMenu()})},t}();e.MobileMenu=s}.apply(e,[n,e]))||(t.exports=r)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/ts/common.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/ts/app.ts":
+/*!***********************!*\
+  !*** ./src/ts/app.ts ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var App = (function () {
+        function App() {
+        }
+        App.domReady = function (callback) {
+            try {
+                document.addEventListener("DOMContentLoaded", callback);
+            }
+            catch (e) {
+                throw Error(e);
+            }
+        };
+        App.getElements = function (selector) {
+            var elements = document.querySelectorAll(selector);
+            return elements.length ? elements : [];
+        };
+        App.getElement = function (selector) {
+            var element = document.querySelector(selector);
+            return element;
+        };
+        App.elementsGetter = function (selector) {
+            return App.transformNodeListToArray(document.querySelectorAll(selector));
+        };
+        App.transformNodeListToArray = function (list) {
+            try {
+                return Array.prototype.slice.call(list);
+            }
+            catch (e) {
+                throw Error(e);
+                return [];
+            }
+        };
+        App.wrap = function (selector, wrapper) {
+            var localWrapper;
+            if (typeof wrapper == "string")
+                localWrapper = document.createElement(wrapper);
+            else if (wrapper instanceof HTMLElement)
+                localWrapper = wrapper;
+            App.each(selector, function (el, i) {
+                localWrapper.innerHTML = el.outerHTML;
+                el.parentNode.replaceChild(localWrapper, el);
+            });
+        };
+        App.each = function (elements, callback) {
+            if (!callback) {
+                console.error("Callback does not exists in yours 'each'");
+                return;
+            }
+            if (typeof elements == "string")
+                elements = App.transformNodeListToArray(App.getElements(elements));
+            else if (elements instanceof NodeList)
+                elements = App.transformNodeListToArray(elements);
+            var i = 0;
+            for (var _i = 0, elements_1 = elements; _i < elements_1.length; _i++) {
+                var el = elements_1[_i];
+                callback(el, i);
+                i++;
+            }
+        };
+        return App;
+    }());
+    exports.App = App;
+    var Element = (function () {
+        function Element(selector) {
+            this._length = 0;
+            if (typeof selector == "string")
+                this.els = App.elementsGetter(selector);
+            else if (selector instanceof HTMLElement)
+                this.els = [selector];
+            else if (selector instanceof NodeList)
+                this.els = App.transformNodeListToArray(selector);
+            else if (selector instanceof Array && (selector[0] instanceof HTMLElement || !selector.length))
+                this.els = selector;
+            else if (selector instanceof Element)
+                this.els = selector.els;
+            else
+                throw Error("Invalid selector: " + selector);
+        }
+        Object.defineProperty(Element.prototype, "els", {
+            get: function () {
+                return this._els;
+            },
+            set: function (elements) {
+                this._els = elements;
+                this._length = elements.length || 0;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(Element.prototype, "length", {
+            get: function () {
+                return this._length;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Element.prototype.is = function (selector) {
+            var element;
+            if (typeof selector == "string")
+                element = App.elementsGetter(selector);
+            else if (selector instanceof HTMLElement)
+                element = [selector];
+            return this.els[0] == element[0];
+        };
+        Element.prototype.has = function (selector) {
+            var searchElements;
+            if (typeof selector == "string")
+                searchElements = App.elementsGetter(selector);
+            else if (selector instanceof HTMLElement)
+                searchElements = [selector];
+            else if (selector instanceof Element)
+                searchElements = selector._els;
+            else if (selector instanceof NodeList)
+                searchElements = App.transformNodeListToArray(selector);
+            else if (selector instanceof Array && (selector[0] instanceof HTMLElement || !selector.length))
+                searchElements = selector;
+            else
+                throw Error("Invalid selector: " + selector);
+            var isFinded = false;
+            for (var _i = 0, _a = this.els; _i < _a.length; _i++) {
+                var el = _a[_i];
+                for (var _b = 0, searchElements_1 = searchElements; _b < searchElements_1.length; _b++) {
+                    var target = searchElements_1[_b];
+                    if (el.contains(target)) {
+                        isFinded = true;
+                        break;
+                    }
+                }
+                if (isFinded)
+                    return true;
+            }
+            return false;
+        };
+        Element.prototype.addClass = function (className) {
+            App.each(this.els, function (el) {
+                el.classList.add(className);
+            });
+            return this;
+        };
+        Element.prototype.removeClass = function (className) {
+            App.each(this.els, function (el) {
+                el.classList.remove(className);
+            });
+            return this;
+        };
+        Element.prototype.toggleClass = function (className, callback) {
+            if (callback === void 0) { callback = function () { }; }
+            App.each(this.els, function (el) {
+                if (el.classList.contains(className)) {
+                    el.classList.remove(className);
+                    callback(false);
+                }
+                else {
+                    el.classList.add(className);
+                    callback(true);
+                }
+            });
+            return this;
+        };
+        Element.prototype.hasClass = function (targetClass) {
+            for (var _i = 0, _a = this.els; _i < _a.length; _i++) {
+                var el = _a[_i];
+                if (el.classList.contains(targetClass))
+                    return true;
+            }
+            return false;
+        };
+        Element.prototype.find = function (selector) {
+            var searchingElements = new Array();
+            App.each(this.els, function (el) {
+                var findedElements = el.querySelectorAll(selector);
+                if (!findedElements.length)
+                    return;
+                for (var _i = 0, _a = App.transformNodeListToArray(findedElements); _i < _a.length; _i++) {
+                    var el_1 = _a[_i];
+                    searchingElements.push(el_1);
+                }
+            });
+            return new Element(searchingElements);
+        };
+        return Element;
+    }());
+    exports.Element = Element;
+    var EventListener = (function (_super) {
+        __extends(EventListener, _super);
+        function EventListener() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        EventListener.prototype.add = function (event, callback, options) {
+            App.each(this.els, function (el) {
+                el.addEventListener(event, function (event) {
+                    callback(this, event);
+                }, options);
+            });
+            return this;
+        };
+        EventListener.prototype.trigger = function (event) {
+            App.each(this.els, function (el) {
+                var evt = document.createEvent("HTMLEvents");
+                evt.initEvent(event, false, true);
+                el.dispatchEvent(evt);
+            });
+            return this;
+        };
+        return EventListener;
+    }(Element));
+    exports.EventListener = EventListener;
+    var mobileMenu = (function () {
+        function mobileMenu(settings) {
+            this._state = false;
+            this._error = false;
+            this.menuActiveClass = "js__opened";
+            this.bodyActiveClass = "js__menu-opened";
+            this.body = App.getElement("body");
+            this._settings = settings;
+            this.burger = App.getElement(settings.burger);
+            this.menu = App.getElement(settings.menu);
+            this.bindEvents();
+        }
+        Object.defineProperty(mobileMenu.prototype, "error", {
+            set: function (text) {
+                this._error = true;
+                console.error(text + ". \u041C\u0435\u043D\u044E \u043D\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u0442");
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(mobileMenu.prototype, "state", {
+            get: function () {
+                return this._state;
+            },
+            set: function (newState) {
+                this._state = newState;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(mobileMenu.prototype, "menu", {
+            get: function () {
+                return this._menu;
+            },
+            set: function (el) {
+                if (!(el instanceof HTMLElement))
+                    this.error = "Меню не найдено";
+                else
+                    this._menu = el;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(mobileMenu.prototype, "burger", {
+            get: function () {
+                return this._burger;
+            },
+            set: function (el) {
+                if (!(el instanceof HTMLElement))
+                    this.error = "Бургер не найден";
+                else
+                    this._burger = el;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(mobileMenu.prototype, "settings", {
+            get: function () {
+                return this._settings;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        mobileMenu.prototype.openMenu = function () {
+            if (!window.matchMedia(this.settings.media).matches)
+                return;
+            if (this.settings.fixBody) {
+                this.body.style.top = -window.pageYOffset + "px";
+                this.body.style.position = "fixed";
+            }
+            this.burger.classList.add("js__active");
+            this.menu.classList.add(this.menuActiveClass);
+            this.body.classList.add(this.bodyActiveClass);
+            this.state = true;
+            return this;
+        };
+        mobileMenu.prototype.closeMenu = function () {
+            if (!window.matchMedia(this.settings.media).matches || !this.state)
+                return;
+            var top = 0;
+            if (this.settings.fixBody) {
+                top = Math.abs(parseInt(this.body.style.top));
+                this.body.style.top = "";
+                this.body.style.position = "";
+            }
+            this.burger.classList.remove("js__active");
+            this.menu.classList.remove(this.menuActiveClass);
+            this.body.classList.remove(this.bodyActiveClass);
+            if (this.settings.fixBody)
+                window.scrollTo(0, top);
+            this.state = false;
+            return this;
+        };
+        mobileMenu.prototype.toggleMenu = function () {
+            if (!window.matchMedia(this.settings.media).matches)
+                return;
+            if (this.state)
+                this.closeMenu();
+            else
+                this.openMenu();
+            return this;
+        };
+        mobileMenu.prototype.bindEvents = function () {
+            var _this = this;
+            document.addEventListener("click", function (event) {
+                var target = new Element(event.target);
+                if (!target.is(_this.burger)
+                    && !new Element(_this.burger).has(target)
+                    && !target.is(_this.menu)
+                    && !new Element(_this.menu).has(target))
+                    _this.closeMenu();
+            });
+            new EventListener(this.burger).add("click", function (el) {
+                _this.toggleMenu();
+            });
+        };
+        return mobileMenu;
+    }());
+    exports.MobileMenu = mobileMenu;
+}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+
+/***/ }),
+
+/***/ "./src/ts/common.ts":
+/*!**************************!*\
+  !*** ./src/ts/common.ts ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(/*! ./app */ "./src/ts/app.ts")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (require, exports, app_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    app_1.App.domReady(function () {
+        ;
+        (function () {
+            window.addEventListener("load", function () {
+                var maxHeight = 0;
+                app_1.App.each(".cat-item__img", function (el, i) {
+                    if (maxHeight < parseInt(getComputedStyle(el).height))
+                        maxHeight = parseInt(getComputedStyle(el).height);
+                });
+                app_1.App.each(".cat-item__img", function (el, i) {
+                    el.style.height = (maxHeight + "px");
+                });
+            });
+        })();
+    });
+}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+
+/***/ })
+
+/******/ });
 //# sourceMappingURL=common.js.map
