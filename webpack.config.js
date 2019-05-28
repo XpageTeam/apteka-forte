@@ -21,7 +21,8 @@ module.exports = {
 				loader: "babel-loader",
 				query: {
 				  "presets": [
-				    ["env"]
+				    "@babel/preset-env"
+
 				  ]
 				},
 				// exclude: /\/node_modules\/(?!dom7|ssr-window|swiper)\//,

@@ -1,4 +1,4 @@
-// import "./standart-page.js";
+import "./standart-page.js";
 
 import $ from "jquery"
 

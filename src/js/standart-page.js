@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", e => {
-	$(".text-page > table").wrap('<div class="table-wrap"><div class="table-wrap__track"></div></div>')
+	
+	$(".inner-content__content > table").wrap('<div class="table-wrap"><div class="table-wrap__track"></div></div>')
 
 	$(".table-wrap")
 		.prepend('<div class="table-wrap__shadow table-wrap__shadow--left"></div>')

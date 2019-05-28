@@ -425,6 +425,9 @@
 
 @media screen and (max-width: 667px)
 
+	.h-menu__link.active
+		font-size: 16px
+
 	.head-burger, .mobile-logo
 		display: block
 
@@ -494,6 +497,7 @@
 	.h-personal__links
 		order: -1
 		display: flex
+		flex-wrap: wrap
 		border-bottom: 1px solid var(--second-color)
 
 		.sign-in
@@ -504,10 +508,18 @@
 				display: none
 
 		li
+			display: flex !important
+			align-items: center
+			justify-content: center
 			width: 50%
+			border-top: 1px solid var(--second-color)
 
-			&:last-child
-				display: none !important
+			&:nth-child(1), &:nth-child(2)
+				border-top: 0
+
+
+			&:nth-child(even)
+				border-left: 1px solid var(--second-color)
 
 		a 
 			font-size: rem(12)

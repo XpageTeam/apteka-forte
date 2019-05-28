@@ -171,7 +171,7 @@
 
 
 		.radio__label
-			padding-left: 50px
+			padding-left: 40px
 			min-height: 15px
 			position: relative
 			display: block
@@ -194,9 +194,9 @@
 
 
 		.radio__label:after
-			top: 7px
-			left: 5px
-			background: #239387
+			top: 6px
+			left: 4px
+			background: #99c945
 			height: 7px
 			width: 7px
 			transition: opacity .3s ease
@@ -234,13 +234,19 @@
 		.radio__label:before
 			top: 2px
 
-		.radio__label span
-			background: #effcf5
+		.radio__label 
+			span
+				background: #effcf5
 
 		.radio
 			position: relative
 			max-width: 360px
 			width: 100% !important
+
+		.bl_apt_item_status
+			span
+				background: #effcf5
+				padding: 0 5px
 
 
 		.bl_apt_item_tel
@@ -558,6 +564,16 @@
 				-moz-box-sizing: border-box
 
 //end
+
+
+.bl_apt_row
+	&__top
+		.btn
+
+.bl_apt_item_btn
+	position: relative
+	background: #effcf5
+	padding-left: 15px
 
 .bl_one_product_avail_cont
 	float: left
@@ -1678,10 +1694,117 @@ div[id^="tab-"]:not(#tab-sale)
 			.bl_one_product_anons
 				margin-bottom: 20px
 
+	.bl_basket_product_item
+		position: relative
+
+
+	.bl_basket_s_zakaz_select_shop
+		margin-top: 25px
+		padding-top: 25px
+
+	.bl_basket
+		&_container
+			margin-bottom: 0
+			padding-top: 0
+
+		&_col
+			&_delete
+				position: absolute
+				top: 20px
+				right: 10px
+
+
+
 @media screen and (max-width: 1000px)
 
 	.bl_one_product_gallery
 		width: 100%
+
+	.bl_basket_first_step_head
+		padding: 0 15px
+
+		.bl_basket_col_name
+			margin: 0
+
+		div:not(.bl_basket_col_name)
+			display: none
+
+
+
+
+	.bl_basket_product_item
+		padding: 25px 0
+
+		.bl_basket_col
+			&_name
+				width: 100%
+
+			&_price
+				margin-left: 121px
+				width: auto
+
+			&_count
+				margin: 0 20px
+
+	.bl_basket_bottom_inf
+		margin-top: 25px
+
+	.bl_basket_first_step_cont
+		margin: 0 0 10px
+
+	.basket_full 
+		.order_page 
+			.radio__label
+				padding-left: 20px
+
+			.bl_one_product_avail_cont 
+				.btn
+					width: auto
+					height: 32px
+					line-height: 30px
+					padding: 0 12px
+
+			.bl_apt_row + .bl_apt_row
+				margin-top: 15px
+
+	.bl_apt_row
+		margin: 0 0 15px
+
+	.basket_full 
+		.order_page 
+			.cart-table
+				display: block 
+
+				tbody, thead
+					display: block
+
+				tr
+					position: relative
+					display: flex
+					flex-wrap: wrap
+					width: 100%
+
+				th
+					text-align: left
+
+					&:not([colspan="2"])
+						display: none
+
+				td
+					padding: 10px
+
+					&:nth-last-child(2)
+						width: 100%
+						max-width: 100%
+
+					&:last-child
+						position: absolute
+						top: 0
+						right: 0
+
+					&[colspan="2"]
+						width: 100%
+
 
 
 @media screen and (max-width: 667px)
@@ -1710,4 +1833,97 @@ div[id^="tab-"]:not(#tab-sale)
 
 	.bl_one_product_avail_cont
 		width: 100%
+
+	.bl_basket_product_item 
+		display: flex
+		flex-direction: column
+
+		.bl_basket_col
+			&_name
+				display: flex
+				flex-direction: column
+
+			&_price
+				margin: 0
+		
+			&_count
+				margin: 15px 0
+
+
+	.bl_basket_product_item_main_inf
+		margin: 0
+
+	.bl_basket_col
+		&_name 
+			.item_product_image
+				width: auto
+				margin-bottom: 20px
+
+		&_price, &_count, &_cost
+			align-self: center
+			width: auto
+
+	.bl_basket_bottom_inf_att
+		padding: 20px
+
+		&_ico
+			position: static
+			transform: none
+			min-height: auto
+			margin-bottom: 10px
+
+	.bl_one_product_avail_h
+		&_tabs
+			display: flex
+			width: 100%
+
+
+			span
+				width: 50%
+
+		&_r
+			display: flex
+			flex-direction: column
+			width: 100%
+
+			select
+				margin: 5px 0 0 0
+				width: 100%
+				max-width: 100%
+
+	.basket_full 
+		.order_page 
+			.bl_apt_row
+				align-items: flex-start
+				margin-right: 0
+
+				&__top
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					margin: 0
+					width: 100%
+
+					> *
+						max-width: 100%
+						width: auto
+
+						&:not(:first-child)
+							margin-top: 10px
+
+						&:empty
+							display: none
+
+					&:before
+						display: none
+
+	.bl_apt_item_btn
+		padding-left: 0
+
+	.bl_basket_s_zakaz_bottom_btns
+		padding-top: 10px
+
+
+
+
 
