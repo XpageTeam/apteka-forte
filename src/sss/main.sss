@@ -99,3 +99,32 @@
 	.lk_bottom_pass
 		padding-top: 20px
 		margin-top: 20px
+
+	.title-block__title h1
+		font-size: 21px
+
+	.bread-crumbs
+		&__this
+			display: none
+
+		&__link
+			position: relative
+			padding-left: 10px
+
+			&:after
+				display: none
+
+			&:before
+				content: ''
+				display: inline-block
+				position: absolute
+				top: 8px
+				left: 0
+				size: 4px
+				border-top: 1px solid #000
+				border-left: 1px solid #000
+				transform: rotate(-45deg)
+
+
+			&:not(:nth-last-child(2))
+				display: none
