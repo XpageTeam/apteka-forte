@@ -371,6 +371,10 @@
 	background: url(../img/ico_att.png) no-repeat 
 	left: 0 
 	top: 0
+
+.bl_one_product_avail_cont_inner
+	margin-right: 20px
+
 .to_old_site 
 	position: fixed 
 	background: #3aa090 
@@ -389,7 +393,6 @@
 .bl_basket_s_zakaz_select_shop .bl_apt_row .radio 
 	display: inline-block 
 	vertical-align: bottom 
-	width: 90px
 
 .basket_product_delete
 	width: 10px
@@ -459,10 +462,28 @@
 		display: flex
 		align-items: center
 
+.ya-share2__container_size_s .ya-share2__item
+	margin: 0 10px 0 0 !important
+
 
 @media (max-width: 667px)
+	
+	.basket-header
+		display: flex
+		flex-direction: column
+		align-items: flex-start !important
+
+	.basket-header__email, .basket-header__pdf, .basket-header__print
+		margin-left: 0 !important
+
+
+	.ya-share2__list
+		display: flex
 	
 	.bl_lk_zakaz_item_cont 
 		> a
 			top: 25px
 			right: 10px
+
+	.bl_apt_row>div.bl_apt_item_status
+		margin-left: 0

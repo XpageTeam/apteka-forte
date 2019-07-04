@@ -1659,6 +1659,7 @@ div[id^="tab-"]:not(#tab-sale)
 	cursor: pointer 
 	border-radius: 50% 
 	position: relative 
+	flex: none
 
 .radio input[type="radio"]:checked + label > span:after
 	content: '' 
@@ -1675,6 +1676,15 @@ div[id^="tab-"]:not(#tab-sale)
 	font-size: 13px 
 	line-height: 20px 
 	position: relative 
+	display: flex
+
+
+.bl_apt_row 
+	.radio 
+		label
+			&:after
+				margin-left: 20px
+
 
 
 @media screen and (max-width: 1200px)
